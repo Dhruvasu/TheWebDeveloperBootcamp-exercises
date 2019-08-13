@@ -1,0 +1,26 @@
+h1 {
+	width: 200px;
+	text-align: center;
+	margin-left: 140px;
+}
+
+td {
+	padding-left: 50px;
+	padding-top: 50px;
+	padding-right: 50px;
+	padding-bottom: 50px;
+}
+
+table {
+	margin: 80px;
+}
+
+.same {
+	border-right: 2px solid blue;
+	border-left: 2px solid blue;
+}
+
+tr:nth-of-type(2) td {
+	border-top: 2px solid blue;
+	border-bottom: 2px solid blue;
+}
