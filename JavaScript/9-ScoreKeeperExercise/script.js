@@ -36,3 +36,15 @@ btnp2.addEventListener("click", function() {
 		p2Score.style.color = "red";
 	}
 });
+
+btnreset.addEventListener("click", function() {
+	p1 = 0;
+	p2 = 0;
+	scores.innerHTML = "<span id=\"p1Score\">" + p1 + "</span> to <span id=\"p2Score\">" + p2 + "</span>";
+	num.value = 5;
+	document.querySelector("p").textContent = "Playing to: " + num.value;
+});
+
+function print() {
+	scores.innerHTML = "<span id=\"p1Score\">" + p1 + "</span> to <span id=\"p2Score\">" + p2 + "</span>";
+}
