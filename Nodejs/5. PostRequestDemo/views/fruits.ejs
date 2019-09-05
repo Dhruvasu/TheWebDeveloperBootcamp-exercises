@@ -1,0 +1,14 @@
+<h1>FRUITS LIST</h1>
+
+<% var fruits; %>
+
+<% for (var i = 0; i < fruits.length; i++) { %>
+	<li>
+		Fruit: <%= fruits[i]; %>
+	</li> 
+<% } %>
+
+<form action="/addFruit" method="POST">
+	<input type="text" name="newfruit" placeholder="fruit">
+	<button>Add fruit</button>
+</form>
