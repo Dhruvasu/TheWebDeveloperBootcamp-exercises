@@ -1,0 +1,14 @@
+<% include partials/header.ejs %>
+
+<% var arr; %>
+
+<% var i = 0; %>
+
+<% while (i < arr.length) { %>
+	<li> 
+		<%= "Title: " + arr[i].title + " Comments: " + arr[i].comments; %> 
+	</li>
+	<% i++; %>
+<% } %>
+
+<% include partials/footer.ejs %>
