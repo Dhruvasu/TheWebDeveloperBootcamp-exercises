@@ -16,6 +16,16 @@ app.post("/search", function(req, res) {
 	res.redirect("/requests");
 });
 
+app.get("/requests", function(req, res) {
+	request("http://www.omdbapi.com/?s=" + movieToSearch + "&apikey=thewdb", function(error, response, body) {
+		if (!error && response.statusCode === 200) {
+			//data received from api is string. JSON.parse converts it to JSON format.
+			var parsedData = JSON.parse(response.body);
+			res.render("results.ejs", {data: parsedData});
+		}
+	});
+});
+
 app.listen(3000, function() {
 	console.log("Server started!");
 });
